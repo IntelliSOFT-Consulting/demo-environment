@@ -1,2 +1,4 @@
 /.env
 /.idea
+/nginx-proxy/fullchain.pem
+/nginx-proxy/privkey.pem

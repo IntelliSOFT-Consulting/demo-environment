@@ -104,7 +104,7 @@ services:
 
   nginx-proxy:
     container_name: nginx-proxy-demo
-    image: uwitech/nginx-proxy
+    image: ./nginx-proxy/Dockerfile
     env_file: .env
     ports:
       - "9000:9000"
