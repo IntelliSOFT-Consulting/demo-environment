@@ -2,7 +2,7 @@
 
 COMPOSE='/usr/local/bin/docker-compose'
 
-echo "Starting to update the Sedish Demo at: `date`"
+echo "Starting to update the CBHIPP Demo at: `date`"
 
 # Restarts the demo by recreating the docker containers
 
@@ -24,4 +24,4 @@ docker images | grep '<none>' | awk '{print $3}' | xargs docker rmi
 
 $COMPOSE up -d
 
-echo "Finished updating the Sedish Demo at: `date`"
+echo "Finished updating the CBHIPP Demo at: `date`"
