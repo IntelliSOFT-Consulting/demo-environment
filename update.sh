@@ -10,7 +10,7 @@ echo "Starting to update the CBHIPP Demo at: `date`"
 git reset --hard origin/master
 git pull
 
-cp conf/.env .env
+#cp conf/.env .env
 ../conf.sh .env
 
 # Restart with new images
