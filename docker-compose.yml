@@ -104,7 +104,9 @@ services:
 
   nginx-proxy:
     container_name: nginx-proxy-demo
-    build: nginx-proxy
+    build:
+      context: ./nginx-proxy
+      dockerfile: Dockerfile
     env_file: .env
     ports:
       - "9000:9000"
