@@ -1,6 +1,8 @@
 #!/bin/sh
 
-COMPOSE='/usr/local/bin/docker-compose'
+#COMPOSE='/usr/local/bin/docker-compose'
+
+COMPOSE='/usr/bin/docker-compose'
 
 echo "Starting to update the CBHIPP Demo at: `date`"
 
