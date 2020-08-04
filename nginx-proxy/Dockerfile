@@ -6,7 +6,7 @@ COPY cmd.sh /cmd.sh
 #COPY fullchain.pem /etc/nginx/certs/fullchain.pem
 #COPY privkey.pem /etc/nginx/certs/privkey.pem
 
-COPY server.crt /etc/nginx/certs/fullchain.pem
-COPY server.key /etc/nginx/certs/privkey.pem
+COPY server.crt /etc/nginx/certs/server.crt
+COPY server.key /etc/nginx/certs/server.key
 
 CMD ./cmd.sh
