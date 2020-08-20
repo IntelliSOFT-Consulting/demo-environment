@@ -19,6 +19,8 @@ services:
       POSTGRES_USER: dhis
       POSTGRES_DB: dhis2
       POSTGRES_PASSWORD: dhis
+    ports:
+      - "5433:5432"
   openempi-db:
     container_name: openempi-db_demo
     image: uwitech/postgresql
