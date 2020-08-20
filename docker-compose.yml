@@ -11,6 +11,14 @@ services:
     env_file: .env
     volumes:
       - fr-pgdata:/var/lib/postgresql/data
+  db:
+    container_name: hmis-db
+    image: mdillon/postgis:10-alpine
+    command: postgres -c max_locks_per_transaction=100
+    environment:
+      POSTGRES_USER: dhis
+      POSTGRES_DB: dhis2
+      POSTGRES_PASSWORD: dhis
   openempi-db:
     container_name: openempi-db_demo
     image: uwitech/postgresql
@@ -125,6 +133,16 @@ services:
     env_file: .env
     depends_on:
       - openmrs-mysql-db
+
+  web:
+    container_name: hmis-web
+    image: dhis2/core:2.33.0
+    volumes:
+    - ./dhis.conf:/DHIS2_home/dhis.conf
+    ports:
+    - "8088:8080"
+    depends_on:
+    - db
 
 volumes:
   mongodb-data:
