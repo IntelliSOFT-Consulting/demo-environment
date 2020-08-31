@@ -12,4 +12,6 @@ In order to have the local version working:
 2. Generate self signed certificates, using a script we provide:
 ```bash
 	./scripts/generate-cert.sh
+	cp /etc/ssl/crt/server.crt demo-environment/nginx-proxy
+	cp /etc/ssl/crt/server.key demo-environment/nginx-proxy
 ```
