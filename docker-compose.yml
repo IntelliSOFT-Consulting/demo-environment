@@ -20,7 +20,7 @@ services:
       POSTGRES_DB: dhis2
       POSTGRES_PASSWORD: dhis
     volumes:
-      - hmis-pgdata:/var/lib/postgresql/hmis-data
+      - hmis-pgdata:/var/lib/postgresql/data
     ports:
       - "5433:5432"
   openempi-db:
