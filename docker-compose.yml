@@ -19,6 +19,8 @@ services:
       POSTGRES_USER: dhis
       POSTGRES_DB: dhis2
       POSTGRES_PASSWORD: dhis
+    volumes:
+      - hmis-pgdata:/var/lib/postgresql/hmis-data
     ports:
       - "5433:5432"
   openempi-db:
@@ -148,6 +150,7 @@ services:
 volumes:
   mongodb-data:
   fr-pgdata:
+  hmis-pgdata:
   cr-pgdata:
   cr-orientdata:
   openxds-pgdata:
